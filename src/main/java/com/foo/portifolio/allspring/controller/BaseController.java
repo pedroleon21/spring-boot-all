@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.foo.portifolio.allspring.model.dto.BaseDto;
-import com.foo.portifolio.allspring.model.entity.auth.BaseEntity;
+import com.foo.portifolio.allspring.model.entity.BaseEntity;
 import com.foo.portifolio.allspring.service.BaseService;
 
 @Service

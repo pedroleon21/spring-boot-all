@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.foo.portifolio.allspring.model.dto.BaseDto;
-import com.foo.portifolio.allspring.model.entity.auth.BaseEntity;
+import com.foo.portifolio.allspring.model.entity.BaseEntity;
 import com.foo.portifolio.allspring.model.mapper.BaseMapper;
 import com.foo.portifolio.allspring.repository.BaseRepository;
 
@@ -12,13 +12,14 @@ import jakarta.transaction.Transactional;
 
 @Transactional
 public abstract class BaseService<Entity extends BaseEntity<ID>, DTO extends BaseDto<ID>, ID> {
-	private BaseMapper<Entity,DTO> mapper;
 	
 	public BaseService(BaseMapper<Entity, DTO> mapper, BaseRepository<Entity, ID> repository) {
 		super();
 		this.mapper = mapper;
 		this.repository = repository;
 	}
+	
+	private BaseMapper<Entity,DTO> mapper;
 
 	private BaseRepository<Entity, ID> repository;
 	
