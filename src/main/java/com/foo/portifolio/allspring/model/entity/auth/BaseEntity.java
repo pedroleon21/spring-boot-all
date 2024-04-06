@@ -1,4 +1,4 @@
-package com.foo.portifolio.allspring.model.entity;
+package com.foo.portifolio.allspring.model.entity.auth;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.foo.portifolio.allspring.model.dto.BaseDto;
-import com.foo.portifolio.allspring.model.entity.BaseEntity;
+import com.foo.portifolio.allspring.model.entity.auth.BaseEntity;
 import com.foo.portifolio.allspring.model.mapper.BaseMapper;
 import com.foo.portifolio.allspring.repository.BaseRepository;
 

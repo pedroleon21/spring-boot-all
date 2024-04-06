@@ -1,7 +1,6 @@
 package com.foo.portifolio.allspring.model.entity.auth;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.foo.portifolio.allspring.model.entity.BaseEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
