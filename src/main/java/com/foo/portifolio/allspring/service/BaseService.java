@@ -3,15 +3,15 @@ package com.foo.portifolio.allspring.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.foo.portifolio.allspring.model.dto.BaseDto;
-import com.foo.portifolio.allspring.model.entity.auth.BaseEntity;
+import com.foo.portifolio.allspring.model.dto.BaseEntityDTO;
+import com.foo.portifolio.allspring.model.entity.BaseEntity;
 import com.foo.portifolio.allspring.model.mapper.BaseMapper;
 import com.foo.portifolio.allspring.repository.BaseRepository;
 
 import jakarta.transaction.Transactional;
 
 @Transactional
-public abstract class BaseService<Entity extends BaseEntity<ID>, DTO extends BaseDto<ID>, ID> {
+public abstract class BaseService<Entity extends BaseEntity<ID>, DTO extends BaseEntityDTO<ID>, ID> {
 	
 	public BaseService(BaseMapper<Entity, DTO> mapper, BaseRepository<Entity, ID> repository) {
 		super();
@@ -19,11 +19,11 @@ public abstract class BaseService<Entity extends BaseEntity<ID>, DTO extends Bas
 		this.repository = repository;
 	}
 	
-	private BaseMapper<Entity,DTO> mapper;
+	protected BaseMapper<Entity,DTO> mapper;
 
-	private BaseRepository<Entity, ID> repository;
+	protected BaseRepository<Entity, ID> repository;
 	
-	public Page<DTO> list(Pageable pageable){
+	public Page<DTO> index(Pageable pageable){
 		return this.repository.findAll(pageable)
 				.map(this.mapper::toDto);
 	}

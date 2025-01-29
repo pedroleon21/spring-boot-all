@@ -1,10 +1,11 @@
-package com.foo.portifolio.allspring.model.dto.auth;
+package com.foo.portifolio.allspring.model.dto.user;
 
-import com.foo.portifolio.allspring.model.dto.BaseDto;
+import com.foo.portifolio.allspring.model.dto.BaseEntityDTO;
 
-public class UserDto extends BaseDto<Integer> {
+public class UserDTO extends BaseEntityDTO<Integer> {
 	private String password;
 	private String username;
+	
 	public String getPassword() {
 		return password;
 	}

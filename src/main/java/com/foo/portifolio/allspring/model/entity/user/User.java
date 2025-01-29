@@ -1,22 +1,18 @@
-package com.foo.portifolio.allspring.model.entity.auth;
+package com.foo.portifolio.allspring.model.entity.user;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.foo.portifolio.allspring.model.entity.BaseEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user",schema = "auth")
-@JsonIgnoreProperties(value = {"password"})
-public class User extends BaseEntity<Integer>{
-	
-	@Column(name= "username")
+@Table(name = "user", schema = "auth")
+public class User extends BaseEntity<Integer> {
+
+	@Column(name = "username")
 	private String username;
-	
+
 	@Column(name = "password")
 	private String password;
 
@@ -31,7 +27,7 @@ public class User extends BaseEntity<Integer>{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}

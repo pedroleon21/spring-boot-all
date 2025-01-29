@@ -1,4 +1,4 @@
-package com.foo.portifolio.allspring.controller;
+package com.foo.portifolio.allspring.controller.coffee;
 
 import java.time.LocalDateTime;
 

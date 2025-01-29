@@ -1,6 +1,6 @@
 package com.foo.portifolio.allspring.model.dto;
 
-public abstract class BaseDto<T> {
+public abstract class BaseEntityDTO<T> {
 	private T id;
 
 	public T getId() {
@@ -10,4 +10,5 @@ public abstract class BaseDto<T> {
 	public void setId(T id) {
 		this.id = id;
 	}
+	
 }
